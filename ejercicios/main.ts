@@ -1,6 +1,6 @@
 import "./style.css";
 //import "./clean-code/07-tarea";
-import "./solid/02-open-close-a";
+import "./solid/my-solution/05-dependency-a";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
