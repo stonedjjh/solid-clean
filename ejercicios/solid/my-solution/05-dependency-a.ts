@@ -1,8 +1,11 @@
 import { PostService } from "./05-dependency-b";
+import { LocalDataBaseService, JsonDataBaseService, WebApiPostService } from "./05-dependency-c";
 
 // Main
 (async () => {
-  const postService = new PostService();
+  const provider = new WebApiPostService("https://jsonplaceholder.typicode.com/posts");
+
+  const postService = new PostService(provider);
 
   const posts = await postService.getPosts();
 
